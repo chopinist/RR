@@ -1,0 +1,93 @@
+//Main bootstrap scheme color
+//$bgDefault      : rgb(30, 44, 117);
+$bgDefault      : #6fff63;
+
+/*
+ * Calculate Luma
+ *
+ * Luma measures a colors perceived brightness
+ * by the human eye.
+ * http://en.wikipedia.org/wiki/YIQ
+ */
+
+@function luma($color){
+
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  @return 0.299 * $r + 0.587 * $g + 0.114 * $b;
+
+}
+
+/*
+ * Contrast Color w/ Luma
+ *
+ * Calculate the contrast based on the luma
+ * value of the color, as per W3C.
+ * http://www.w3.org/TR/AERT#color-contrast
+ */
+@function contrast-color(
+  $color,
+  $contrast_percentage,
+  $dark: darken($color,$contrast_percentage),
+  $light: lighten($color,$contrast_percentage),
+  $threshold: 130
+) {
+  @return if(luma($color) < $threshold, $light, $dark)
+}
+
+//Highlighted background of col and hovered text
+$bgHighlight    : contrast-color($bgDefault,15%);
+//Static text color
+$colDefault     : contrast-color($bgDefault,55%);
+//Selected col text color
+$colHighlight   : contrast-color($bgHighlight,80%);
+
+.navbar-default {
+  background-color: $bgDefault;
+  border: 0;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}

@@ -1,0 +1,90 @@
+/*
+ * Calculate Luma
+ *
+ * Luma measures a colors perceived brightness
+ * by the human eye.
+ * http://en.wikipedia.org/wiki/YIQ
+ */
+/*
+ * Contrast Color w/ Luma
+ *
+ * Calculate the contrast based on the luma
+ * value of the color, as per W3C.
+ * http://www.w3.org/TR/AERT#color-contrast
+ */
+/* line 47, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default {
+  background-color: pink;
+  border: 0;
+}
+/* line 50, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-brand {
+  color: #a7001d;
+}
+/* line 52, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: black;
+}
+/* line 54, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-text {
+  color: #a7001d;
+}
+/* line 58, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-nav > li > a {
+  color: #a7001d;
+}
+/* line 60, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: black;
+}
+/* line 63, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: black;
+  background-color: #ff748c;
+}
+/* line 67, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: black;
+  background-color: #ff748c;
+}
+/* line 70, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-toggle {
+  border-color: #ff748c;
+}
+/* line 72, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #ff748c;
+}
+/* line 74, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #a7001d;
+}
+/* line 76, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #a7001d;
+}
+/* line 79, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-link {
+  color: #a7001d;
+}
+/* line 81, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+.navbar-default .navbar-link:hover {
+  color: black;
+}
+
+@media (max-width: 767px) {
+  /* line 85, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #a7001d;
+  }
+  /* line 87, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: black;
+  }
+  /* line 90, C:/Users/Eylam/SkyDrive/Rails Projects/RoomReservation/app/assets/stylesheets/custom_navbar.scss.erb */
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: black;
+    background-color: #ff748c;
+  }
+}
